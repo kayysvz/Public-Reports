@@ -7,7 +7,7 @@ output: html_notebook
 library(tidyverse)
 library(ggplot2)
 
-wd <- "C:/Users/kayys/Downloads"
+wd <- #deleted working directory
 setwd(wd)
 data <- read_csv("Landlord_Tenant_Caseload_CY_2018-2022.csv")
 ```
