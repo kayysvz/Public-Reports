@@ -1,0 +1,29 @@
+NYC Open Data FOIL Denial Analysis
+Tools: Python · pandas
+Data: NYC Open Data — Agency Open Data Plans (live city dataset)
+Overview
+Analysis of NYC agency responses to Freedom of Information Law (FOIL) requests, focusing on datasets that agencies have refused to publish on the Open Data portal. By cross-referencing FOIL request volume against denial justifications, this project maps where public demand for government data is highest — and where agencies are pushing back most.
+Key Findings
+DEP's hazardous materials database is the single most-requested denied dataset.
+The DERTA/IPS Database — containing hazardous materials storage information — generated 1,081 FOIL requests while remaining off the Open Data portal, justified by the agency as a security risk. This is more than three times the request volume of the next most-denied dataset.
+"Security" and "privacy" are the dominant justification categories.
+Denial reasons cluster into a small number of categories: security risk, personally identifiable information (PII), internal administration, and administrative burden. PII concerns are cited most frequently across agencies, often for datasets where redaction would be technically feasible.
+The NYPD and OATH account for a disproportionate share of denials by volume.
+NYPD denials include gun recovery data, investigative cards, and ShotSpotter activation records — all citing either machine-readability limitations or law enforcement sensitivity. OATH generated a large number of individual "Respondent's Data" denial entries, suggesting a pattern of treating routine payment records as exempt from publication.
+Some agencies cite backlog rather than sensitivity.
+The Department of Buildings repeatedly justifies non-publication with "other datasets have been prioritized" — a capacity argument rather than a legal one. This represents a distinct and trackable denial category: datasets that could be published but haven't been.
+A meaningful percentage of all tracked datasets are not on the Open Data plan.
+Calculated as denied / total, this figure provides a baseline transparency rate for NYC's Open Data program across all participating agencies.
+Denial Categories (Derived)
+CategoryExamplesSecurity riskDEP hazardous materials, DOT signal timing, NYPD gun dataPII / privacyCHRMS, license applications, complaint historiesNot machine-readableDOC contraband records, NYPD pursuit dataInternal administrationGang sheets, crew schedules, bridge work ticketsAdministrative burdenDOHMH health datasets, HPD housing lottery dataCapacity / backlogMultiple DOB datasets
+Methods
+
+Pulled live dataset directly from NYC Open Data API
+Filtered for records where Is the data set on Open Data? == "Not on Open Data Plan"
+Sorted denied datasets by FOIL request volume to identify highest-demand suppressions
+Calculated overall denial rate as share of total tracked datasets
+Derived denial reason taxonomy from agency public statements column
+
+Data Source
+NYC Open Data — Agency Open Data Plans and FOIL Requests
+https://data.cityofnewyork.us/api/views/93kn-fhqt/rows.csv
