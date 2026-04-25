@@ -1,0 +1,30 @@
+FDIC Bank Failure Analysis (2000–2023)
+Tools: Python · pandas · matplotlib
+Data: FDIC Failed Bank List (live federal dataset)
+
+Overview
+Analysis of FDIC bank failure data to understand the scale, geography, and acquisition patterns of U.S. bank failures — with a focus on the 2008 financial crisis. The central finding: nearly every bank that failed during the crisis was acquired by another institution, meaning the crisis represented a massive consolidation event as much as a collapse.
+Key Findings
+Failures and acquisitions track almost perfectly.
+Plotting failed banks against acquired banks per year reveals the two lines are nearly identical — the overwhelming majority of failed banks were absorbed by surviving institutions rather than simply closed. This held true even at the peak of the crisis in 2008–2010.
+The 2008 crisis produced a failure spike with no modern parallel.
+Bank failures rose sharply beginning in 2008 and peaked around 2010, dwarfing failure rates in every other year in the dataset. The post-2010 decline was equally steep.
+A small number of acquirers absorbed a disproportionate share of failures.
+The top acquiring institutions — led by Centennial Bank, Fidelity Bank, and First NBC Bank — each absorbed multiple failed banks, suggesting strategic consolidation behavior rather than incidental acquisition.
+Some acquirers later failed themselves.
+A subset of banks that acquired failed institutions subsequently appeared on the FDIC failed list themselves — notably First NBC Bank, which acquired two banks before its own 2017 failure. This points to acquisition-driven risk accumulation as a failure pathway.
+Florida, Georgia, and Illinois were the hardest-hit states.
+Geographic concentration of failures was pronounced in Sun Belt and Midwest states, reflecting regional exposure to real estate and commercial lending losses.
+Atlanta, Chicago, and Orlando led by city.
+Failure concentration in specific metro areas reflects both market size and local real estate bubble dynamics.
+Methods
+
+Pulled live data directly from FDIC public API endpoint
+Parsed and cleaned closing dates, normalized institution name strings for join matching
+Identified acquirers-that-later-failed via string matching between acquiring institution and failed bank name columns
+Aggregated by year, state, city, and acquiring institution for pattern analysis
+Visualized with matplotlib
+
+Data Source
+FDIC Failed Bank List — updated regularly by the Federal Deposit Insurance Corporation.
+https://www.fdic.gov/bank/individual/failed/banklist.csv
