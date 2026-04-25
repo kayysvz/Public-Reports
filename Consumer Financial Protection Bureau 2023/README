@@ -1,0 +1,36 @@
+CFPB Consumer Complaint Analysis (2023)
+Tools: Power BI
+Data: CFPB Consumer Complaint Database — 2023
+
+Overview
+Analysis of Consumer Financial Protection Bureau (CFPB) complaint data for 2023, examining how financial institutions respond to consumer complaints, which states are underserved by the referral and relief system, and which companies generate the most complaints. The central finding: companies almost never admit fault, rarely face monetary consequences, and the states with the highest unmet consumer protection need receive proportionally the least relief.
+Key Findings
+Most complaints result in no monetary relief.
+The dominant resolution outcome is "Closed with explanation" — companies respond, but without financial remedy. Complaints closed with monetary relief represent a small fraction of total resolutions, suggesting the complaint system functions primarily as a documentation mechanism rather than a financial recovery channel for most consumers.
+Companies almost never admit fault — and mostly stay silent publicly.
+The vast majority of company public responses fall into "Company chose not to publicly respond," with "Company believes it acted appropriately" as the next most common. Admissions of fault or wrongdoing are effectively absent from the dataset, regardless of resolution outcome.
+Texas has the largest gap between complaint volume and proportional relief.
+Among high-complaint states, Texas shows the most significant disparity between the number of issues filed and the proportion receiving monetary relief or CFPB referral — representing the largest underserved consumer protection opportunity in the dataset. Georgia follows closely behind.
+New York and California refer above their complaint volume.
+In contrast to TX and GA, NY and CA generate CFPB referrals at a rate proportionally higher than their raw complaint counts, suggesting more active consumer advocacy infrastructure or more complex complaint profiles in those states.
+Credit bureaus and credit reporting companies dominate the complaint landscape.
+Equifax, TransUnion, and Experian account for the largest share of complaints by a significant margin — collectively representing the majority of total complaint volume. This concentration reflects systemic consumer friction with credit reporting accuracy and dispute processes.
+Visualizations
+
+CFPB Growth by Issues — Total complaint volume trend over time
+Issues by Resolution — Breakdown of company response outcomes
+Top Public Responses — How companies respond publicly to complaints
+Top Companies by Complaint — Complaint share by institution (donut chart)
+States with Proportionally Less Damages Rewarded — Filing volume vs. monetary relief rate by state
+States with Proportionally Less Referrals to CFPB — Filing volume vs. referral rate by state
+
+Methods
+
+Connected to CFPB Consumer Complaint Database (2023) in Power BI
+Built calculated measures comparing raw complaint counts against monetary relief rates and referral rates by state
+Visualized company response distributions and resolution outcomes
+Ranked companies by total complaint volume
+
+Data Source
+CFPB Consumer Complaint Database
+https://www.consumerfinance.gov/data-research/consumer-complaints/
