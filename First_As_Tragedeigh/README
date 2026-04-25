@@ -1,0 +1,30 @@
+"Eigh" Names: Are They Really Growing in Popularity?
+Tools: Python · pandas · seaborn · matplotlib
+Data: SSA Baby Names — Social Security Card Applications, 1880–2022 · US Population (USAFacts)
+
+Overview
+Prompted by a Reddit observation that names containing "eigh" — Kayleigh, Ryleigh, Everleigh — seemed to be everywhere, this project investigates whether the trend is real, whether it's driven by population growth, and who's actually getting the names.
+143 years of SSA baby name data. One very specific question.
+
+Key Findings
+Yes, "eigh" names are genuinely growing — not just a population effect.
+Raw counts of eigh names rise sharply from the 1990s onward, but controlling for US population tells the same story. Per-100,000 people, eigh names have increased dramatically over the modern era, confirming the trend is real and not an artifact of there simply being more people.
+Girls are getting almost all of them.
+All-time counts broken down by sex show an overwhelming female skew. The "eigh" construction appears to function as a feminizing suffix in contemporary naming culture — attached to otherwise gender-neutral or male roots (Kyle → Kyleigh, Riley → Ryleigh, Ashley → Ashleigh).
+Everleigh dominates the modern era.
+The top "eigh" name by single-year count is Everleigh, a name that barely existed before the 2010s. Among all-time leaders: Everleigh, Ryleigh, Ashleigh, Leigh, Kayleigh, Kyleigh, Leighton, Haleigh, Charleigh.
+The bottom of the list is something else entirely.
+Least common eigh names include Journeigh, Kayleigha, Joeleigh, Coleigh, and Kaizleigh — names with counts so low they likely represent single families. Carry on my weighward son.
+Methods
+
+Parsed SSA annual name files (one .txt per year, 1880–2022) into a unified dataframe with year extracted from filename
+Filtered for names containing the substring "eigh"
+Aggregated counts by year to plot raw trend
+Merged with US population data to calculate per-capita rate (eigh names per 100,000 people)
+Grouped by sex for all-time gender breakdown
+Identified top name per year via idxmax, and ranked all-time by total count
+
+Data Sources
+
+SSA Baby Names: https://catalog.data.gov/dataset/baby-names-from-social-security-card-applications-national-data
+US Population: USAFacts historical population CSV
